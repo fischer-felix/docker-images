@@ -39,4 +39,4 @@ jobs:
           context: nextcloud/nginx/
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: fischer-felix/nginx-nc:latest
+          tags: ghcr.io/fischer-felix/nginx-nc:latest
