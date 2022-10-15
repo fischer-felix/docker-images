@@ -4,7 +4,12 @@ This repository is meant to be a collection of custom Docker images I use. The i
 
 You can either get the images from the Packages section or from [DockerHub](https://hub.docker.com/u/fischerfelix).
 
-## nginx-nc (nextcloud)
+## nextcloud-fpm-alpine-imagick (nextcloud/app)
+This image takes the official `nextcloud:fpm-alpine` image and adds/enables the `imagick` extension. 
+
+This removes the `Module php-imagick in this instance has no SVG support. For better compatibility it is recommended to install it.` warning from the Nextcloud admin panel and allows drawing SVGs.
+
+## nginx-nc (nextcloud/nginx)
 This image is meant for use when deploying [nextcloud-fpm](https://github.com/nextcloud/docker/tree/master/.examples/docker-compose/insecure/mariadb/fpm).
 It provides a standard `nginx:alpine` image with the `nginx.conf` file recommended on the official [GitHub Repo](https://github.com/nextcloud/docker/tree/master/.examples/docker-compose/insecure/mariadb/fpm) (plus correct routing for /.well-known/{webfinger, nodeinfo}).
 
