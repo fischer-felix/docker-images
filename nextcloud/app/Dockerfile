@@ -11,7 +11,7 @@ COPY --from=build /usr/local/etc/php-fpm.d/www.conf /usr/local/etc/php-fpm.d/www
 ENV PM.MAX_CHILDREN=5 \
     PM.START_SERVERS=2 \
     PM.MIN_SPARE_SERVERS=1 \
-    PM.MAX_SPARE_SERVERS=3 \
+    PM.MAX_SPARE_SERVERS=3 
 
 RUN apk add --update --no-cache autoconf g++ imagemagick imagemagick-dev libtool make pcre-dev \
     && pecl install imagick \
