@@ -1,3 +1,0 @@
-[submodule "octoprint-docker"]
-	path = octoprint-docker
-	url = git@github.com:fischer-felix/octoprint-docker.git
