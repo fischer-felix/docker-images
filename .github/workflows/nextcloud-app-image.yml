@@ -1,4 +1,4 @@
-name: Build and push Docker image for nginx-nc
+name: Build and push Docker image for nextcloud:fpm-alpine-imagick
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'nextcloud/nginx/**'
+      - 'nextcloud/app/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,9 +44,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: nextcloud/nginx/
+          context: nextcloud/app/
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            fischerfelix/nginx-nc:latest
-            ghcr.io/fischer-felix/nginx-nc:latest
+            fischerfelix/nextcloud-fpm-alpine-imagick:latest
+            ghcr.io/fischer-felix/nextcloud-fpm-alpine-imagick:latest
